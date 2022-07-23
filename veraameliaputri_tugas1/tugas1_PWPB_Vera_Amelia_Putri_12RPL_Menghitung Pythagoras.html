@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pythagoras</title>
+	<style>
+		* {
+			position: relative;
+		}
+
+		#triangle {
+			width: 230px;
+			display: flex;
+			align-self: center;
+			margin: auto;
+		}
+		body {
+			background-color: blueviolet;
+		}
+		input::placeholder {
+			text-align: center;
+			font-weight: bold;
+			color: floralwhite;
+		}
+		input {
+			width: 40px;
+		}
+		#aInput{
+			top: 20px;
+		}
+		#bInput {
+			left: 10px;
+			top: 20px;
+		}
+		#button {
+			width: 70px;
+			top: 35px;
+		}
+		#result {
+			width: 40px;
+			background-color: #ffff;
+			text-align: center;
+			position: relative;
+			font-weight: bold;
+			font-family: sans-serif;
+			left: 140px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="heading" style="color: white">Hitung Pythagoras</h1>
+	<img src="rumus pythagoras.png">
+
+	<div id="container">
+		<input placeholder="..." id="aInput"/>
+		<input placeholder="..." id="bInput"/>
+
+		<div id="result"></div>
+
+		<button id="button">Hitung</button>
+	</div>
+
+	<script>
+		var button = document.getElementById("button");
+
+		function calculateHypotenuse() {
+			var a = document.getElementById("aInput").value;
+			var b = document.getElementById("bInput").value;
+
+			var result = document.getElementById("result");
+
+			var hypotenuse = Math.round(Math.sqrt(a * a + b * b));
+
+			result.innerHTML = hypotenuse;
+		}
+
+		button.addEventListener("click", calculateHypotenuse);
+	</script>
+</body>
+</html>
