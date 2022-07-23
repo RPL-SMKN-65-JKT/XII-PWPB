@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phytagoras</title>
+    <style>
+        input:focus{
+            outline: none;
+        }
+
+        input:invalid {
+                border: 1px solid red;
+            }
+    </style>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Masukkan input X" id="X" pattern="[0-9]+">
+        <input type="text" placeholder="Masukkan input Y" id="Y" pattern="[0-9]+">
+        <button class="" id="hitung">Hitung</button>
+        <div class="btn" id="hasil"></div>
+    </div>
+    <script>
+
+        var hitung = document.getElementById("hitung");
+
+        function Phytagoras() {
+            var X = document.getElementById("X").value;
+            var Y = document.getElementById("Y").value;
+            var hasil = document.getElementById("hasil");
+
+            var result = Math.sqrt(Math.pow(X, 2) + Math.pow(Y, 2));
+
+            hasil.innerHTML = result;
+        };
+
+        hitung.addEventListener("click",Phytagoras);
+    </script>
+</body>
+</html>

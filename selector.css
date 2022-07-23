@@ -1,0 +1,11 @@
+p::first-letter {
+    color:#ff0000;
+    font-size: 20px;  
+}
+
+/*memberi warna merah dan mengatur ukuran font sebesar 20 pixel pada huruf pertama di semua tag p*/
+
+div > p {
+    background-color: yellow;
+}
+/*mewarnai background text dengan warna kuning pada tag p yang mempunyai parent tag div*/
