@@ -1,4 +1,4 @@
-<!--- 4. Buatlah program yang menampilkan gambar berikut!--->
+<!--- 2. Buatlah program yang menampilkan gambar berikut!--->
 
 <html>
     <head>
