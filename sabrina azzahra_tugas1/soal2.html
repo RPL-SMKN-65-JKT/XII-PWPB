@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width-device-width, initial-scale-1.0"/>
+        <title>Tugas PWPB</title>
+        <style>
+            * {
+                position: relative;
+            }
+
+            #triangle {
+                width: 230px;
+                display: flex;
+                align-self: center;
+                margin: auto;
+            }
+            body{
+                background-color: darkcyan;
+            }
+            input::placeholder{
+                text-align: center;
+                font-weight: bold;
+                color: black;
+            }
+            input{
+                width: 40px;
+            }
+            #aInput {
+                top: 20px;
+            }
+            #bInput{
+                left: 10px;
+                top: 20px;
+            }
+            #button{
+                width: 70px;
+                top: 35px;
+            }
+            #result {
+                width: 40px;
+                background-color: #ffff;
+                text-align: center;
+                position: relative;
+                font-weight: bold;
+                font-family: sans-serif;
+                left: 140px;
+            }
+        </style>
+    </head>
+    <h1 id="heading" style="color: white">Phytagoras Calculator</h1>
+
+    <div id="container">
+        <input placeholder="..." id="aInput"/>
+        <input placeholder="..." id="bInput"/>
+
+        <div id="result"></div>
+
+        <button id="button">Hitung</button>
+    </div>
+
+    <script>
+        var button = document.getElementById("button");
+
+        function calculateHypotenuse() {
+         var a = document.getElementById("aInput").value;
+         var b = document.getElementById("bInput").value;
+
+         var result = document.getElementById("result");
+
+         var hypotenuse = Math.round(Math.sqrt(a * a + b * b));
+
+         result.innerHTML = hypotenuse;
+        }
+
+        button.addEventListener("click", calculateHypotenuse);
+    </script>
+
+</html>
