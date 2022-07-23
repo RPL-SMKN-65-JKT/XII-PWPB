@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>1. Jelaskan maksud dari perintah perintah berikut!</h1>
+        <p><b>A.</b> p::first.letter {color : #ff0000;font.size : 28px;}</p>
+        <p>first.letter Adalah SELECTOR yang digunakan untuk menambahkan gaya ke huruf pertama dari pemilih yang ditentukan. di code tersebut, digunakan untuk membuat tulisan menjadi berwarna merah dan font berukuran 28 piksel </p>
+        <p><b>B.</b> div > p {background-color: yellow;}</p>
+        <p>kode tersebut adalah selector div u  ntuk membuat semua background pada tag "p" menjadi warna kuning</p>
+    </div>
+
+    <div>
+        <h1>2. Buatlah Program yang menampilkan gambar berikut! (Program Penghitung Pythagoras)</h1>
+        <div class="content">
+            <div class="2">
+                <h3>Hitung Pythagoras</h3>
+            </div>    
+        <div class="nilaiX">
+            <div class="hitung">
+                <h5>Masukan nilai X :</h5>
+            </div>
+            <div class="kolomx">
+                <input type="text" id="nilaix">
+            </div>
+        </div>
+         <div class="nilaiY">
+            <div class="hitung2">
+                <h5>Masukan nilai Y :</h5>
+            </div>
+            <div class="kolom2">
+                <input type="text" id="nilaiy">
+            </div>
+        <br>
+        </div>
+        <button type="button" onclick="cetak()">Hitung</button>
+        <h6 id="isi"></h6>
+    </div>
+        </div>
+        <script type="text/javascript">
+            function cetak() {
+            var x=document.getElementById('nilaix').value;
+            var y=document.getElementById('nilaiy').value;
+            if(x==""||y==""){
+                alert("Nilai harus diisi");
+            }
+            else if (x=="" && y==""){
+                elert("Nilai harus diisi");
+            }
+            var x2=parseInt(x);
+            var y2=parseInt(y);
+            var hasil2=(x2*x2)+(y2*y2);
+            var hasil3=Math.sqrt(hasil2);
+            var hasil4=hasil3.toFixed(2);
+            if(hasil4=="NaN"){
+                alert("Nilai harus diisi dengan angka");
+            }
+            else if(hasil4!="NaN"){
+            document.getElementById('isi').innerHTML= "Hasilnya adalah "+hasil4;
+        }
+        }
+        </script>
+    
+    <div><p>4. Buatlah program untuk membuat form</p>
+        <div class="data">
+            <form>
+            <div class="nama">
+            <h4>Nama siswa :</h4>
+        <input type="text" name="">
+        </div>
+        <div class="nisn">
+            <h4>NISN    :</h4>
+        <input type="text" name="">
+        </div>
+        <div class="tanggallahir">
+            <h4>Tanggal Lahir :</h4>
+        <input type="date" name="">
+        </div>
+    </div>
+    
+</body>
+</html>
