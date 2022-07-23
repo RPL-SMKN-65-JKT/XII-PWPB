@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jawaban Soal Pwpb</title>
+</head>
+<body>
+
+<div class="Nama">
+  <h6> Nama: Musyaffa Ramdhan<br>
+        Kelas: 12Rpl<br>
+      </h6>
+</div>
+
+<!-- Jawaban Nomor.1 -->
+1. p.first-letter {
+  color : #ff0000;
+  font-size : 28px;
+}
+div > p {
+  background-color: yellow;
+}
+<!-- P.first-letter: untuk memilih huruf pertama di setiap tag -->
+<!-- color: berguna untuk mengatur warna teks sesuai dengan kebutuhan dan keinginan kita -->
+<!-- font-size: untuk mengatur ukuran atau besar kecil nya font sebesar 28px -->
+<!-- div > p: untuk memilih semua tag p yang parent nya tag div -->
+<!-- Background-color: yellow untuk memberikan warna latar belakang yang berwarna kuning -->
+<br>
+<br>
+
+<!-- Jawaban Nomor.2 -->
+2. <section>
+  <div class="container" style="display: flex; justify-content: space-between;">
+  <div class="box">
+    <label for="a"></label>
+      <input id="a" type=number placeholder="Masukan Nilai X ">
+  </div>
+  <div class="box">
+    <label for="b"></label>
+    <input id="b" type=number placeholder="Masukan Nilai Y ">
+  </div>
+  <div class="box">
+    <label for="c"></label>
+    <input id="c" type=number placeholder="kosongkan kolom ">
+    <!--serius saya mau hapus tuh kolom nya, karna jelek kalau ada kolom nganggur gitu bu-->
+  </div>
+  <div class="box">
+    <button id="tombol" onclick="fungsi()">hitung</button>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+    function fungsi()
+{
+  var vals = {};
+
+  if( document.getElementById("a").value.length > 0 )
+  {
+      vals.a = document.getElementById("a").value;
+  }
+  if( document.getElementById("b").value.length > 0 )
+  {
+      vals.b = document.getElementById("b").value;
+  }
+  if( document.getElementById("c").value.length > 0 )
+  {
+      vals.c = document.getElementById("c").value;
+  }
+
+  if( Object.keys(vals).length < 2 )
+  {
+      alert('Need 2 values');
+      return;
+  }
+  if( typeof vals.a != 'undefined' && typeof vals.b != 'undefined' )
+  {
+      alert( ( Math.sqrt( vals.a * vals.a + vals.b * vals.b ) ) );
+  }
+  else if( typeof vals.b != 'undefined' && typeof vals.c != 'undefined' )
+  {
+      alert( ( Math.sqrt( vals.b * vals.b + vals.c * vals.c ) ) );
+  }
+  else if( typeof vals.a != 'undefined' && typeof vals.c != 'undefined' )
+  {
+      alert( ( Math.sqrt( vals.a * vals.a + vals.c * vals.c ) ) );
+  }
+}
+</script>
+</section>
+<br>
+<br>
+
+
+<!-- Jawaban Nomor.3-->
+3. <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+<title>Pwpb</title>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-3 m-0 border-0 bd-example bd-example-row">
+
+<div class="container text-center">
+<div class="row">
+  <div class="col-1">
+    1 of 3
+  </div>
+  <div class="col-8">
+    2 of 3 (wider)
+  </div>
+  <div class="col-3">
+    3 of 3
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    1 of 3
+  </div>
+  <div class="col-5">
+    2 of 3 (wider)
+  </div>
+  <div class="col">
+    3 of 3
+  </div>
+</div>
+</div>
+</body>
+</html>
+
+<br>
+<br>
+
+<!-- Jawaban Nomor.4--> 
+4. <html>
+<head><title>Belajar Form</title></head>
+<link rel="stylesheet" href="style.css">
+<body>
+<form action="submit.php" method="POST">
+  <p>Nama Siswa: <input type="text" name="username" /></p>
+  <p>NISN : <input type="number" name="nisn" /></p>
+  <p>Tanggal Lahir: <input type="date" name="tanggal lahir" /></p>
+</form>
+</body>
+</html>.
+
+</body>
+</html>
