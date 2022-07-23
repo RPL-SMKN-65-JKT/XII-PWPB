@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Soal 1</title>
+
+	<style type="text/css">
+		
+		/*<!-- Soal 1
+		Jelaskan maksud dari perintah-perintah berikut! -->*/
+
+		p.first-letter{
+			color: #ff0000;
+			font-size: 28 px;
+		}
+		/*Maksud dari perintah diatas adalah, mengubah salah satu tag p yang mempunyai class bernama first-letter, untuk mengubah warna teks menjadi merah karena dalam kode warna ff0000 adalah merah, dan juga memperbesar teks menjadi ukuran 28 px */
+
+		div > p{
+			background-color: yellow;
+		}
+		/*Maksud dari perintah diatas adalah mengubah salah satu tag div yang didalam tag tersebut ada tag pmenjadi mempunyai background teks yang berwarnaa kuning*/
+	</style>
+</head>
+<body>
+
+</body>
+</html>
