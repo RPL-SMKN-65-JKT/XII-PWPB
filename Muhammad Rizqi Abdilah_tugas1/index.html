@@ -1,0 +1,179 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWPB ygy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+
+        body {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        div.soal {
+            text-align: center;
+        }
+
+        div.box {
+            margin: 100px 0;
+        }
+
+        h1 {
+            font-family: "Lato", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 1px;
+            line-height: 23px;
+        }
+
+        #tagHtml {
+            font-family: "Monospace", monospace;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #E3E3E3;
+        }
+
+        img#soal {
+            height: 95vh;
+            border-radius: 10px;
+        }
+
+        p.testSoalPertama::first-letter {color: #ff000f;font-size: 20px;}
+
+    </style>
+</head>
+<body>
+
+    <!-- SOAL -->
+
+    <div class="soal">
+        <img id="soal" src="soal.jpeg" alt="Soal">
+    </div>
+
+    <br><br><br><br>
+
+    <div class="box">
+        <h1>1. Jelaskan maksud dari perintah berikut!</h1>
+
+        <p id="tagHtml">p::first-letter {color: <div id="FF0000"></div>;font-size: 20px;}</p>
+        <p class="text"><b>PSEUDO CLASS first-letter AKAN MENYELEKSI HURUF PERTAMA DARI ELEMENT</b></p>
+
+        <br>
+
+        <p class="text"><b>Contoh :</b></p>
+        <p class="text testSoalPertama">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, dolores!</p>
+
+        <br>
+
+        <p id="tagHtml">div > p {background-color: yellow;}</p>
+        <p class="text"><b>SELECTOR TERSEBUT AKAN MENYELEKSI SEMUA TAG P YANG BERADA DI DALAM DIV</b></p>
+    </div>
+
+    <div class="box">
+        <h1>2. Buatlah Program Yang Menampilkan Gambar Seperti Di Soal</h1>
+        <h3>NOTE!</h3>
+        <ul>
+        <li>jika ingin mencari sisi miring maka kalian harus mengisi alas dan tinggi</li>
+        <li>jika ingin mencari alas kalian maka kalian harus mengisi miring dan tinggi</li>
+        <li>jika ingin mencari tinggi maka kalian harus mengisi miring dan alas</li>
+        <li>jika miring lebih besar angkanya maka hasilnya negatif karena saya tidak tau logika if else wkwkwk</li>
+        <li>jadi kalo hasilnya mines itu bisa kalian ubah dipikiran kalian jadi positif :)</li>
+        </ul>
+        <h4>Hasilnya juga masih dalam bentuk akar kuadrat, yah karena emang dipelajaran matematika pasti kita harus sederhanakan akar kuadrat itu</h4>
+        <label for="">Alas</label>
+        <input type="number" id="alas">
+        <label for="">Tinggi</label>
+        <input type="number" id="tinggi">
+        <label for="">Miring (opsional)</label>
+        <input type="number" id="miring">
+        <button id="hitung">Hitung</button>
+        <div id="output"></div>
+        <script>
+            const alas = document.getElementById('alas')
+            const tinggi = document.getElementById('tinggi')
+            const miring = document.getElementById('miring')
+            const hitung = document.getElementById('hitung')
+            const output = document.getElementById('output')
+            hitung.addEventListener('click', function(){
+                let a = alas.value
+                let t = tinggi.value
+                let c = miring.value
+                let l = (a*a)+(t*t)-(c*c)
+                output.innerHTML = `Jadi hasil yang diperoleh adalah √${l}`
+            })
+        </script>
+
+    <div class="box">
+        <h1>3. Berapakah jumlah grid pada bootstrap? Buatlah program untuk layout bootstrap!</h1>
+
+        <p class="text">Bootstrap memiliki jumlah grid yang cukup banyak, yaitu sebanyak 12 grid</p>
+        <br><br>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col border p-3">
+                1 of 3
+                </div>
+                <div class="col-7 border p-3">
+                2 of 3 (wider)
+                </div>
+                <div class="col-4 border p-3">
+                3 of 3
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col border p-3">
+                1 of 3
+                </div>
+                <div class="col-6 border p-3">
+                2 of 3 (wider)
+                </div>
+                <div class="col border p-3">
+                3 of 3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="box">
+        <h1>4. Buatlah Program Untuk Membuat Form</h1>
+
+        <form action="" method="POST">
+            <div class="mb-3">
+                <label for="nama" class="form-label">>Nama Siswa : </label>
+                <input type="text" id="nama" name="nama" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="nisn" class="form-label">>NISN Siswa : </label>
+                <input type="number" id="nisn" name="nisn" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="tgllhr" class="form-label">>Tanggal Lahir Siswa : </label>
+                <input type="date" id="tgllhr" name="tgllhr" class="form-control" required>
+            </div>
+              <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+        </form>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
