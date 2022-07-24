@@ -1,0 +1,16 @@
+/*a*/
+p: first-letter {
+	color: #ff0000;
+	font-size: 28px;	
+}
+/* -selector tag 'p' menggunakan fungsi html untuk duberikan efek css 
+   -selector pseudo elemen,digunakan untuk memberikan efek menarik . 'first-letter'
+   -'color'merupakan propert dengan '#ff0000' sebagai valuenya.
+   -'font-size' merupakan property dengan '28px' sebagai valuenya. */
+   /*b*/
+   div >p {
+   	   background: yellow;
+   }
+   /* -selector tag 'div >p' menggunakan fungsi html untuk diberikan efek css
+      -'background-color' merupakan property dengan 'yellow' sebagai valuenya. */
+      
