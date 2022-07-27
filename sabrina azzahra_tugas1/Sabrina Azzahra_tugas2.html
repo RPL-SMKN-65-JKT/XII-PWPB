@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Menghitung luas segitiga</title>
+        <style>
+            .content{
+                width: 500px;
+                margin-left: 425px;
+            }
+            body{
+                background-color: mediumseagreen;
+            }
+        </style>
+        <script type="text/javascript">function hitungluas(){alas=document.getElementById("alas").value;
+        
+        tinggi=document.getElementById("tinggi").value;
+        luas=(alas*tinggi)*0.5;
+        document.getElementById("luas").value=luas}
+        </script>
+    </head>
+    <body style="margin: 17% auto;">
+        <div class="content">
+        <form>
+            <fieldset style="background-color: darkseagreen;">
+            <h4 align="center">Menghitung Luas Segitiga</h4>
+            <table align="center" >
+                <tr>
+                    <td>Alas</td>
+                    <td>:</td>
+                    <td><input type="text"id="alas"name="alas"></td>
+                </tr>
+                <tr>
+                    <td>Tinggi</td>
+                    <td>:</td>
+                    <td><input type="text"id="tinggi"name="tinngi"></td>
+                </tr>
+                <tr>
+                    <td>Luas</td>
+                    <td>:</td>
+                    <td><input type="text"id="luas"name="luas"disabled="true"size="5"></td>
+                </tr>
+                <td></td>
+                <td></td>
+                <td><button onclick="hitungluas(); return false" id="submit_button">Hitung Luas</button></td>
+            </table>
+            </fieldset>
+        </form>
+        </div>
+    </body>
+</html>
