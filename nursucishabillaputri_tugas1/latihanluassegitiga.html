@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Menghitung Luas Segitiga</title>
+<script type="text/javascript">
+     function hitungluas(){
+     alas=document.getElementById("alas").value;
+     tinggi=document.getElementById("tinggi").value;
+     luas=(alas*tinggi)*0.5;
+     document.getElementById("luas").value=luas;
+     }
+</script>
+<style type="text/css">
+    form { 
+      margin: 0 auto; 
+      width: 70%;
+      height: 90%;
+    }
+
+    fieldset{
+      background: #B09B71;
+      background-size: cover; 
+      background-attachment: fixed;  
+      padding: 10px 40px 20px 40px;
+      margin: 0 auto;  
+      width: 50%;
+      height: 40%;
+      border: 2px solid;
+    }
+
+    td input{
+        background: #EDDFB3;
+        border: 2px solid; 
+    }
+
+    td input:hover{
+        background: #ECE5C7;
+        border: 2px solid; 
+    }
+</style>
+</head>
+<body style="margin: 4%;">
+   <form>
+    <fieldset>
+    <h1 align="center">Menghitung Luas Segitiga</h1>
+      <table>
+         <tr>
+              <td>Alas</td>
+              <td>:</td>
+              <td><input type="text" id="alas" name="alas"></td>
+         </tr>
+         <tr>
+              <td>Tinggi</td>
+              <td>:</td>
+              <td><input type="text" id="tinggi" name="tinggi"></td>
+         </tr> 
+          <tr>
+              <td>Luas</td>
+              <td>:</td>
+              <td><input type="text"  id="luas" name="luas" disabled="true" size="5"></td>
+         </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td><input type="button" value="hitung" onClick="hitungluas()"></td>
+         </tr>
+      </table>
+     </fieldset>
+    </form>
+</body>
+</html>
