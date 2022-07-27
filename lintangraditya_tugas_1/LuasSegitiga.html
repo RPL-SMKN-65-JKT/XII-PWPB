@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><font face="Times New Roman" size="14" color="black">Menghitung Luas Segitiga</font></p>
+    <form name="hitungls3" method="post">
+      <table>
+        <tr>
+          <td>Alas</td>
+          <td>:</td>
+          <td><input type="number" name="alass3" value="0" onchange="hitungluas();" /></td>
+        </tr>
+        <tr>
+          <td>Tinggi</td>
+          <td>:</td>
+          <td><input type="number" name="tinggis3" value="0" onchange="hitungluas();" /></td>
+        </tr>
+        <tr>
+          <td>Luas</td>
+          <td>:</td>
+          <td><input type="text" name="luass3" onchange="hitungluas();" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+  <script type="text/javascript">
+    function hitungluas() {
+      var alas = document.forms["hitungls3"]["alass3"].value;
+      alas = parseInt(alas);
+      var tinggi = document.forms["hitungls3"]["tinggis3"].value;
+      tinggi = parseInt(tinggi);
+      var luas = (alas * tinggi) / 2;
+      document.forms["hitungls3"]["luass3"].value = luas;
+    }
+  </script>
+</html>
