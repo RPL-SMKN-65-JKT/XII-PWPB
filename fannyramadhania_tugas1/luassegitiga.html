@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Menghitung Luas Segitiga</title>
+	<style type="text/css">
+		.form{
+			background-color: #BEDD99 ;
+			width: 300px;
+			height: auto;
+			border: 2px;
+			border-style: dashed;
+
+		}
+
+		.form label{
+			margin-left: 10px;
+		}
+
+		.form button{
+			margin-left: 70px;
+			padding: 10px;
+		}
+
+		.form h2{
+			text-align: center;
+		}
+		input{
+			background-color: #66994F;
+		}
+		button{
+			margin-top: 30px;
+		}
+
+		.form p{
+			margin-left: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="form">
+	
+		<h2>Luas Segitiga</h2>
+		<label>Masukan alas :</label>
+		<input  style="margin-left: 12px;" type="text" name="" id="a"><br>
+		<br>
+		<label>Masukan tinggi :</label>
+		<input type="text" name="" id="t"><br>
+		<button onclick="luassegitiga()">Klik untuk melihat hasil</button>
+		
+		<p id="hasil"></p>
+</div>
+	<script type="">
+		
+		function luassegitiga(a,b) {
+		var alas=document.getElementById('a').value;
+		var tinggi=document.getElementById('t').value;
+		var alas2=parseInt(alas);
+		var tinggi2=parseInt(tinggi);
+		var hasil;
+
+		hasil=(alas2*tinggi2)/2;
+		hasil.toFixed(2);
+		if(alas==""||tinggi==""){
+			alert("Nilai harus diisi");
+		}
+		else if (alas=="" && tinggi==""){
+			aclert("Nilai harus diisi");
+		}
+		else{
+			document.getElementById('hasil').innerHTML="hasil luas segitiga adalah "+hasil;
+
+		}
+		
+
+		}
+
+
+
+		
+
+	</script>
+
+</body>
+</html>
+
