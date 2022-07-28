@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan jQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .container { 
+          height: 200px;
+          position: relative;
+        }
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+    <button id="yt"> Youtube</button>
+    </div>
+</div>
+    <script>
+        $("document").ready(function(){
+            $("#yt").click(function(){
+                alert ("anda ngabers?");
+                document.location.href = "https://www.youtube.com/watch?v=8zwz2fVgfVM";
+            })
+        })
+    </script>
+
+<table border="1" cellspacing="0" cellpadding="5" align="center" >
+<tr align="center">
+<td>NAMA</td>
+<td>KELAS</td>
+<td>UMUR</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+$("table").append("<tr><td>abcd</td><td>12 RPL</td><td>18 Tahun</td></tr>");
+$("table").append("<tr><td>efgh</td><td>12 RPL</td><td>17 Tahun</td></tr>");
+$("table").append("<tr><td>ijkl</td><td>12 RPL</td><td>17 Tahun</td></tr>");
+$("table").append("<tr><td>mnop</td><td>12 RPL</td><td>17 Tahun</td></tr>");
+</script>
+</body>
+</html>
