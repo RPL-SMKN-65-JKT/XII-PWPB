@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	body {
+		width: 95%;
+		margin: 0 auto;
+		text-align: center;
+		/*line-height: 100vh;*/
+	}
+
+	button {
+		padding: 20px;
+		border-radius: 10px;
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
+
+	table {
+		width:50%;
+		padding: 5px;
+		height: 30%;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+</style>
+</head>
+
+<body style="background: #FCE2DB">
+
+	<button id="cari" style="background: #D75281"> youtube </button>
+	<button id="tambah">Tambah Data Tabel</button>
+
+	<table id="tabel" border="2px">
+		<tr>
+            <td>Nama Siswa</td>
+            <td>Kelas</td>
+            <td>Umur</td>
+        </tr>
+	</table>
+
+	<script>
+		$(document).ready(function(){
+			$("#cari").click(function(){
+				alert ("hallo");
+					document.location.href =  "https://youtu.be/WSv_uA_MEfc";
+			});
+
+			$("#tambah").click(function(){
+				var nama = prompt("Nama Siswa : ");
+				var kelas = prompt("Kelas : ");
+				var umur = prompt("Umur : ");
+				var data = "<tr><td>" + nama + "</td><td>" + kelas + "</td><td>" + umur + "</td></tr>";
+
+				return $("#tabel").append(data);
+			});
+		});
+	</script>
+</body>
+</html>
