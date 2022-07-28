@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!-- <he ad> -->
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>jQuery</title>
+
+	<style type="text/css">
+		.container {
+			height: 200px;
+			position: relative;
+		}
+
+		.center {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform : translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		table{
+			background-color: pink;
+		}
+		h2{color: blue;}
+	</style>
+</head>
+<body>
+	<h2>Table Nama Siswa</h2>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<tr>
+			<th>Nama Siswa</th>
+			<th>Kelas</th>
+			<th>Umur</th>
+		</tr>
+	</table>
+	<br>
+	<div class="container">
+		<div class="center"></div>
+		<button id="yt">klik disini untuk buka youtube</button>
+	</div>
+	<div>
+		<script>
+			$("document") .ready(function(){
+				$("#yt") .click(function(){
+					alert ("https://youtu.be/ZY40HscUDZk");
+					document.location.href = "https://youtu.be/ZY40HscUDZk ";
+				})
+			})
+
+			$("table").append("<tr><td>Apra Hazima Sunjaya</td><td>XII-RPL</td><td>17 Tahun</td></tr>");
+			$("table").append("<tr><td>Kia Fauzan</td><td>XII-MM</td><td>17 Tahun</td></tr>");
+			$("table").append("<tr><td>Fadilla Rahma</td><td>XII-RPL</td><td>17 Tahun</td></tr>");
+			$("table").append("<tr><td>Revan Febian</td><td>XII-MM</td><td>17 Tahun</td></tr>");
+		</script>
+	</div>
+
+</body>
+</html>
