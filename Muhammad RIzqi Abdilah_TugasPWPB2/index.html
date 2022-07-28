@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            button#btn {
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 30px;
+                background-image: linear-gradient(120deg, #3498db, #8344ad);
+                width: 300px;
+                height: 100px;
+
+            }
+            #tabel-data {
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 30px;
+                background-image: linear-gradient(120deg, #3498db, #8344ad);
+                width: 300px;
+                height: 100px;
+            }
+            
+        </style>
+        <script>
+            $(document).ready(function(){
+            $("#btn").click(function(){
+                return document.location.href = prompt("Masukkan link");
+            });
+            $("#btn1").click(function(){
+                $(this).hide();
+            });
+            $("p").click(function(){
+                $(this).hide();
+            });
+            $("#tabel-data").click(function(){
+                var Nama = prompt("Nama:");
+                var Kelas = prompt("Kelas:");
+                var Umur = prompt("Umur:");
+            
+                var data = "<tr><td>" + Nama + "<td>" + Kelas + "<td>" + Umur + ""; 
+
+                return $("table").append(data);
+            });
+        });
+        </script>
+    </head>
+    <body>
+    <section style="padding: 20px; border-radius: 10px; font-size: 30px; text-align: center;">
+        <button id="btn" class="btn btn-primary">Cari Link Youtube</button>
+        <button id="tabel-data" class="btn btn-primary">Membuat Tabel</button>
+    </section>
+        <table class="table table-striped table-bordered" style="padding: 20px; border-radius: 10px; font-size: 20px; text-align: center; margin: 45px; margin: 0px">
+            <tr>
+                <td>Nama</td>
+                <td>Kelas</td> 
+                <td>Umur</td>
+            </tr>
+        </table>
+    <section>
+        
+    </section>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
