@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>button</title>
+	<script type="text/javascript" src="jquery-3.6.0.min.js">
+	
+	</script>
+	<style type="text/css">
+		div {
+			align-content: center;
+		}
+
+		.btn {
+			background-color: ghostwhite;
+			border: none;
+			color : black;
+			padding: 60px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 36px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button class="btn">Isekai</button>	
+	</div>
+	<table border="1">
+<!-- 		<tr>
+			<td>Nama</td>
+			<td>Kelas</td>
+		</tr> -->
+	</table>
+	<script type="text/javascript">
+			$("button").click(function() {
+			alert("oi");
+			document.location.href = "https://kaguya.love/";
+		});
+
+		$("table").prepend("<tr><td>nama</td><td>kelas</td></tr>");
+		$("table").append("<tr><td>pirdi</td><td>12rpl</td></tr>");
+		$("button").after("<tr><td>saya</td><td>kamu</td></tr>");
+		// $("table").before("<tr><td>aharus</td><td>kudu</td></tr>");
+	</script>
+</body>
+</html>	
