@@ -1,0 +1,128 @@
+<!--Membuat Link dengan JQuery-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Learn JQuery</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+     body {
+     	 margin: 5%;
+     }
+
+     fieldset{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      background-attachment: fixed;  
+      padding: 10px 40px 20px 40px;
+      margin: 0 auto;  
+      width: 25%;
+      height: 20%;
+      border: 2px solid;
+     	background-color: #90C8AC;
+     	background-size: cover; 
+      background-attachment: fixed;  
+     }
+
+		.container{
+			height: 200px;
+			position: relative;
+           display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+
+		}
+
+        .center{
+        	margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	-ms-transform: translate(-50%, -50%);
+        	transform: translate(-50%, -50%);
+        }
+
+        /*bagian table*/
+         table {
+         border-collapse:collapse;
+         border-spacing:0;    
+         border:1px black solid;
+         margin-top: 20px;
+        }
+   th, td {
+     padding:5px 10px;
+     border:1px black solid;}
+   th{
+     background-color: #73A9AD;
+   }
+   td{
+      background-color: #C4DFAA;
+   }
+   tr:nth-child(even) {
+     background-color: #EDEDED;
+   }
+   tr:nth-child(odd) {
+     background-color: #FFF;
+   }
+	</style>
+</head>
+<body>
+<fieldset>
+   <div class="container">
+      <div class="center">
+      	<p style="font-family: 'Edu VIC WA NT Beginner', cursive; font-size: 30px;"><b>Recomended Song</b></p>
+   	    <button id="yt3" style="background-color: #C4DFAA;">Click in Here!</button>
+      </div>
+  </div>
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<!--membuat tabel dengan JQuery-->
+<button id="tambah" style="background-color: #6E85B7;">Tambah</button>
+<table border="1" id="table">
+  <tr>
+     <th><b>Nama Siswa</b></th>
+     <th><b>Kelas</b></th>
+     <th><b>Umur</b></th>
+  </tr>
+
+</table>
+</body>
+ <script>
+ 	$("document").ready(function(){
+
+      // LINK YOUTUBE
+
+ 		$("#yt3").click(function(){
+ 			alert("Ini akan membuka video di Youtube");
+ 			document.location.href="https://www.youtube.com/watch?v=T4cdfRohhcg";
+ 		});
+
+      // MEMBUAT DATA TABEL
+
+      $("#tambah").click(function() {
+        var nama = prompt("Nama Siswa :");
+        var kelas = prompt("Kelas :");
+        var umur = prompt("Umur :");
+
+        var data = "<tr><td>" + nama + "</td><td>" + kelas + "</td><td>" + umur + "</td></tr>";
+      
+         return $("#table").append(data);
+      });
+ 	});
+ </script>
+</html>
