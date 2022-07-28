@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-3.6.0.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			width: 100%;
+			overflow-x: hidden;
+			text-align: center;
+		}
+
+		div.buatTabel {
+			width: 95%;
+			margin: 0 auto;
+			display: flex;
+		}
+
+		nav {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: auto;
+			padding: 15px;
+			background-color: white;
+			display: flex;
+			margin-bottom: 100px;
+			justify-content: space-evenly;
+			box-sizing: border-box;
+			background-color: midnightblue;
+		}
+
+		div.content {
+			margin-top: 170px;
+		}
+
+		button {
+			width: 50%;
+			margin: 20px auto;
+			padding: 20px;
+			font-size: 20px;
+			outline: none;
+			border: none;
+			background-color: white;
+			color: midnightblue;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: .1s;
+			font-family: "Helvetica Neue", sans-serif;
+			font-weight: bolder;
+		}
+
+		button:active {
+			transform: scale(.9);
+		}
+
+		button#tambahkan {
+			width: 95%;
+			background-color: midnightblue;
+			color: white;
+			border-radius: 0;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			margin-top: 0;
+			margin-bottom: 50px;
+		}
+
+		div#vid {
+			display: flex;
+			justify-content: space-evenly;
+			width: 95%;
+			margin: 0 auto;
+			flex-wrap: wrap;
+		}
+
+		iframe {
+			width: 500px;
+			height: 275px;
+			margin-bottom: 50px;
+			border-radius: 10px;
+			border: 5px solid midnightblue;
+		}
+
+		table {
+			width: 95%;
+			margin: 0 auto;
+		}
+
+		table tr td {
+			padding: 15px;
+			font-family: "Montserrat", sans-serif;
+		}
+
+		table tr td input {
+			outline: none;
+			border: none;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<nav>
+		<button id="youtube">Cari Video Youtube</button>
+		<span style="color: midnightblue;">|</span>
+		<button id="tambah">Tambah Data Tabel</button>
+	</nav>
+
+	<div class="content">
+
+		<div id="vid"></div>
+
+		<table cellspacing="0" border="1px" id="tabel">
+			<tr>
+				<td><h2>Nama Siswa</h2></td>
+				<td><h2>Kelas</h2></td>
+				<td><h2>Umur</h2></td>
+			</tr>
+			<tr id="isiData">
+				<td><input type="text" id="nama" placeholder="Nama..." required></td>
+				<td><input type="text" id="kelas" placeholder="Kelas..." required></td>
+				<td><input type="text" id="umur" placeholder="Umur..." required></td>
+			</tr>
+		</table>
+		<button id="tambahkan">Tambah</button>
+
+	</div>
+
+	<script>
+		$(document).ready(function(){
+
+			// MENAMBAHKAN VIDEO YOUTUBE
+
+			let cekVideo = localStorage.getItem('video');
+			if(cekVideo) {
+				$("#vid").append(cekVideo);
+			}
+
+			let cekSiswa = localStorage.getItem('siswa');
+			if(cekSiswa) {
+				$("#isiData").before(cekSiswa);
+			}
+
+			$("#youtube").click(function(){
+				let str = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + prompt("Masukan link youtube yang ingin dibuka : ").substr(17) + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+				let get = localStorage.getItem('video');
+
+				if(!get) {
+
+					localStorage.setItem('video', str);
+
+				} else {
+
+					localStorage.setItem('video', get + str);
+
+				}
+
+				return $("#vid").append(str);
+			});
+
+			// MENAMBAH DATA TABEL DENGAN PROMPT
+
+			$("#tambah").click(function(){
+				let nama = prompt("Nama Siswa :");
+				let kelas = prompt("Kelas :");
+				let umur = prompt("Umur :");
+
+				let data = "<tr><td>" + nama + "</td><td>" + kelas + "</td><td>" + umur + "</td></tr>";
+				let get = localStorage.getItem('siswa');
+
+				if(!get) {
+
+					localStorage.setItem('siswa', data);
+
+				} else {
+
+					localStorage.setItem('siswa', get + data);
+
+				}
+
+				return $("#isiData").before(data);
+			});
+
+			// MENAMBAH DATA TABEL DENGAN INPUT FORM
+
+			$("#tambahkan").click(function(){
+				let nama = $("#nama").val();
+				let kelas = $("#kelas").val();
+				let umur = $("#umur").val();
+
+				let siswa = "<tr><td>" + nama + "</td><td>" + kelas + "</td><td>" + umur + "</td></tr>";
+
+				let get = localStorage.getItem('siswa');
+
+				if(!get) {
+
+					localStorage.setItem('siswa', siswa);
+
+				} else {
+
+					localStorage.setItem('siswa', get + siswa);
+
+				}
+
+				$("#nama").val("");
+				$("#kelas").val("");
+				$("#umur").val("");
+
+				alert("Data Berhasil Ditambahkan");
+
+				return $("#isiData").before(siswa);
+			});
+		});
+	</script>
+</body>
+</html>
