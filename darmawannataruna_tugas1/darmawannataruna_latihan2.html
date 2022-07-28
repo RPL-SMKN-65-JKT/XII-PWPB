@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan jQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .container { 
+          height: 200px;
+          position: relative;
+        }
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+    <button id="yt">Click</button>
+        </div>
+    </div> 
+    <table border="2">
+        <tr>
+            <td>Nama Siswa</td>
+            <td>Kelas</td>
+            <td>Umur</td>
+        </tr>
+    </table>
+    <script>
+        $("document").ready(function(){
+            $("#yt").click(function(){
+                alert ("Ini akan membuka video di Youtube");
+                document.location.href = "https://youtu.be/Gu2pTdhrj20";
+            })
+        })
+        
+        $("table").append("<tr><td>Darmawan Nataruna</td><td>XII-RPL</td><td>17</td></tr>");
+        $("table").append("<tr><td>Lintang Raditya</td><td>XII-RPL</td><td>17</td></tr>");
+    </script>
+
+   
+</body>
+</html>
