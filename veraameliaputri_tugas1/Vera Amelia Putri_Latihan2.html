@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Latihan JQquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<style>
+	.container{
+		height: 200px;
+		position: relative;
+	}
+	.center{
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+	body {
+		color: #191970;
+		background-color: #708090;
+	}
+	.button{
+		margin-left: 39.5%;
+		margin-bottom: 3rem;
+	}
+	table{
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px black solid;
+		margin-top: 20px;
+		margin-left: 39.5%;
+	}
+	th, td {
+		padding: 5px 10px;
+		border: 1px black solid;}
+	th{
+		background-color: #7FFFD4;
+	}
+	tr:nth-child(even) {
+		background-color: #EDEDED;
+	}
+	tr:nth-child(odd) {
+		background-color: #FFF;
+	}
+</style>
+<body style="margin: 4% auto;">
+	<button class="button" style="background: whitesmoke; height: 50px; width: 300px; font-size: 20px;">My Playlist</button>
+	<table border="1" width="300px">
+		<thead>
+			<th>Nama Siswa</th>
+			<th>Kelas</th>
+			<th>Umur</th>
+		</thead>
+	</table>
+	<script type="text/javascript">
+	$("document").ready (function(){
+		$("button").click(function(){
+			alert("My Playlist");
+			document.location.href ="https://youtu.be/SHj2kJzVi_g";
+		});
+	});
+	$("table").append("<tr><td>Vera Amelia Putri</td><td>12 RPL</td><td>17</td></tr>");
+	$("table").append("<tr><td>Camelia Dianita</td><td>12 RPL</td><td>17</td></tr>");
+	$("table").append("<tr><td>Sabrina Azzahra</td><td>12 RPL</td><td>17</td></tr>");
+
+	</script>
+</body>
+</html>
