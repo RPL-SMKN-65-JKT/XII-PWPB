@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belajar JQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="jquery.js"></script>
+  <style type="text/css">
+    .item{
+      position: absolute;
+      left: 20%;
+      top: 50px;
+      border: 1px solid black;
+      padding: 10px;
+      background-color: #ECD2DB ;
+    }
+    body{
+      background-color: #B6B8E7 ;
+    }
+    th{
+      width:300px;
+      text-align: center;
+      height: 50px;
+
+      
+    }
+    table .headtable{
+      background-color: pink;
+    }
+
+    #tambah{
+    
+      border-radius: 150px;
+      margin-top: 40px;
+      width: 300px;
+      height: 50px;
+      background-color: #AAB7B8 ;
+      cursor: pointer;
+    }
+
+    #data{
+      margin-left: 370px;
+      background-color: #D1F2EB;
+      width: 250px;
+      height: 250px;
+      border-style: dotted;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+
+    .tambah2{
+      width: 70px;
+      height: 30px;
+      margin-left: 10px;
+      cursor: pointer;
+      background-color: #D6EAF8;
+    }
+
+   .in{
+      margin-top: 30px;
+      background-color: #AAB7B8 ;
+
+    }
+
+    #data2{
+      margin-left: 20px;
+    }
+    
+    form{
+      margin-left: 10px;
+    }
+
+    .inputan{
+      display: flex;
+      margin-top: 30px;
+    }
+
+    .resett{
+      width: 70px;
+      height: 30px;
+      margin-left: 70px;
+      cursor: pointer;
+      background-color: #D6EAF8;
+    }
+    .inputan2{
+      display: flex;
+      justify-content: space-around;
+    }
+    #link{
+     
+      border-radius: 150px;
+      margin-top: 40px;
+      width: 300px;
+      height: 50px;
+      background-color: #AAB7B8 ;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="item">
+  
+<table border="1px">
+  <tr class="headtable">
+    <th>Nama</th>
+    <th>Usia</th>
+    <th>Kelas</th>
+  </tr>
+<tfoot>
+  
+</tfoot>
+</table>
+<div class="inputan2">
+  <input id="link" type="submit" name="" value="Klik Untuk Ke Situs Youtube">
+  <input id="tambah" type="submit" name="" value="Klik Untuk Menambah Data Tabel">
+</div>
+
+
+ 
+ <div id="data">
+  <form> 
+    <label>Nama :</label>
+    <input class="in" type="text" name="" id="nama"><br>
+    <label>Usia :</label>
+    <input class="in" type="text" name="" id="kelas"><br>
+    <label>Kelas :</label>
+    <input class="in" type="text" name="" id="usia"><br>
+    <div class="inputan">
+    <input class="tambah2" type="submit" name="" value="Tambah">
+    <input type="reset" name="" value="Reset" class="resett">
+    </div>
+  </form>
+</div>
+</div>
+<script type="text/javascript">
+   $(document).ready(function(){
+      $('form').submit(function(){
+        var nama=$('#nama').val();
+        var usia=$('#usia').val();
+        var kelas=$('#kelas').val();
+        if(nama=="" || usia==""||kelas==""){
+          alert("Data tidak boleh ada yang kosong");
+        }
+        else{
+        $('table').append("<tr><th>"+nama+"</th><th>"+usia+"</th><th>"+kelas+"</th></tr><tr>");
+        event.preventDefault();
+      };
+      });
+
+      $('#tambah').click(function(){
+        $('#data').fadeToggle();
+      })
+
+      $('#link').click(function(){
+        alert("Ini akan mengarahkan ke situs youtube");
+        document.location.href="https://www.youtube.com/watch?v=O62kAvoO9lM";
+      })
+   });
+</script>
+
+</body>
+</html>
