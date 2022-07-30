@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tugas PWPB</title>
+
+	<style type="text/css">
+		body{
+			background-color: #D5B2C4 ;
+			font-size: 25px;
+			
+		}
+		.judul{
+			
+			text-align: center;
+			color: #301526 ;
+			font-family: Brush Script MT;
+			font-size: 35px;
+
+			
+
+		}
+
+		div.2{
+			color: white;
+			font-size: 30px;
+		}
+
+		.nilaiX{
+			display: flex;
+			margin-left: 5px;
+
+		}
+
+		.kolomx{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		.nilaiY{
+			display: flex;
+			margin-left: 5px;
+
+
+		}
+
+		.kolom2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		.content{
+			margin-left: 500px;
+			display: flex;
+			width: 400px;
+			flex-direction: column;
+			border: 2px solid black;
+			background-color: #F0B27A ;
+		}
+
+		.nama{
+			display: flex;
+
+		}
+
+		.nama input{
+			height: 10px;
+			margin-top: 43px;
+			margin-left: 5px;
+		}
+		.nisn{
+			display: flex;
+			
+		}
+		.nisn input{
+			height: 10px;
+			margin-top: 43px;
+			margin-left: 5px;
+		}
+
+		.ttl{
+			display: flex;
+		}
+
+		.ttl input{
+			height: 10px;
+			margin-top: 43px;
+			margin-left: 5px;
+		}
+		
+		.profil{
+			width: 300px;
+			background-color: #A2C29C ;
+			border: 2px solid black;
+			border-style: dashed;
+		}
+		
+		.profil h6{
+
+		}
+
+		.content div.2{
+			text-align: center;
+		}
+
+		.hitung{
+			font-size: 20px;
+		}
+
+		.hitung2{
+			font-size: 20px;
+		}
+
+		button{
+			background-color: #FAD7A0 ;
+			width: 200px;
+			margin-left: 90px;
+		}
+
+		.data{
+			margin-left: 450px;
+			background-color: #96A3E9 ;
+			width: 500px;
+		}
+		legend{
+			text-align: center;
+		}
+
+		form{
+			border: 3px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="profil">
+	<h6>Nama :Fanny ramadhania <br>
+		No Absen :13 <br>
+		Kelas :XII-Rekayasa Perangkat Lunak <br>
+	</h6>
+	</div>
+	<div class="judul">
+		<h2>TUGAS PWPB 22 JULI 2022</h2>
+	</div>
+	
+	<p>1.Jelaskan maksud dari perintah berikut! <br>
+	   <pre>
+a.) p::first-letter {
+    color: #ff0000;
+    font-size: 28 px;
+	}
+	   </pre> 
+	</p>
+	<h6>Jawab :<br>
+	Maksud dari perintah diatas adalah,mengubah tag p,yang diawal hurufnya diperbesar menjadi ukuran 28 px,dan juga mengubah warna huruf depannya menjadi merah karena dalam kode warnda #ff0000 adalah merah</h6>
+
+	<pre>
+b.) div > p {
+	background-color: yellow;
+	}
+	</pre>
+	<h6>Jawab : <br>
+	Maksud dari perintah diatas adalah mengubah salah satu tag div yang didalam tag tersebut ada tag p menjadi mempunyai background teks yang berwarna kuning</h6>
+
+	<p>2.Buatlah program yang menampilkan program tersebut!</p>
+	
+		
+	<div class="content">
+		<div class="2">
+			<h5 style="color: white; text-align: center;">Hitung Pythagoras</h5>
+		</div>
+
+	<div class="nilaiX">
+		<div class="hitung">
+			<h5>Masukan nilai X :</h5>
+		</div>
+		<div class="kolomx">
+			<input type="text" id="nilaix">
+		</div>
+	</div>
+
+	 <div class="nilaiY">
+		<div class="hitung2">
+			<h5>Masukan nilai Y :</h5>
+		</div>
+		<div class="kolom2">
+			<input type="text" id="nilaiy">
+		</div>
+	</div>
+	<button type="button" onclick="cetak()">Klik untuk melihat hasil </button>
+	<h6 id="isi"></h6>
+</div>
+
+	</div>
+	
+
+	<script type="text/javascript">
+
+		function cetak() {
+			
+
+		var x=document.getElementById('nilaix').value;
+		var y=document.getElementById('nilaiy').value;
+
+		if(x==""||y==""){
+			alert("Nilai harus diisi");
+		}
+		else if (x=="" && y==""){
+			elert("Nilai harus diisi");
+		}
+
+		var x2=parseInt(x);
+		var y2=parseInt(y);
+
+		var hasil2=(x2*x2)+(y2*y2);
+		var hasil3=Math.sqrt(hasil2);
+		var hasil4=hasil3.toFixed(2);
+
+		if(hasil4=="NaN"){
+			alert("Nilai harus diisi dengan angka");
+		}
+		else if(hasil4!="NaN"){
+		document.getElementById('isi').innerHTML= "Hasilnya adalah "+hasil4;
+	}
+	}
+	</script>
+<p>4.Buatlah program yang menampilkan program tersebut!</p>
+<div class="data">
+	<form>
+	<fieldset>
+	<legend>Data Siswa</legend>
+	<div class="nama">
+	<h6>Nama siswa :</h6>
+<input type="text" name="">
+</div>
+<div class="nisn">
+	<h6>NISN    :</h6>
+<input type="text" name="">
+</div>
+<div class="ttl">
+	<h6>Tanggal lahir :</h6>
+<input type="date" name="">
+</div>
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>
