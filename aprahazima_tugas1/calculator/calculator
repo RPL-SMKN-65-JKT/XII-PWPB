@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>apra hazima | calculator</title>
+	
+	<!-- CSS -->
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: Viga;
+		}
+
+		body {
+			background: whitesmoke;
+			height: 637px;
+		}
+
+		.main {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: fixed;
+			background: rgba(0,0,0,0.4);
+			padding: 25px;
+			border-radius: 15px;
+			box-shadow: 0 0 15px;
+		}
+
+		.main h2 {
+			text-align: center;
+			color: white;
+			text-transform: uppercase;
+		}
+
+		.button {
+			width: 50px;
+			height: 50px;
+			font-size: 25px;
+			margin: 2px;
+			cursor: pointer;
+			border: none;
+			background: #607d8b;
+			color: white;
+			border-radius: 25px;
+	
+		}
+
+		.btn-green {
+			background:lightgreen;
+			color:#607d8b;
+		}
+
+		.textarea {
+			width: 204px;
+			margin: 4px;
+			font-size: 20px;
+			padding: 10px;
+			border: none;
+			color: #607d8b;
+			border-radius: 25px;
+			text-align: right;
+		}
+	</style>
+
+	<!-- Script -->
+	<script type="text/javascript">
+		// Insert angka ke textview
+		function insert(num){
+		document.form.textarea.value = document.form.textarea.value + num;
+		}
+
+		// Fungsi Hitung
+		function equal(){
+		var hasil = document.form.textarea.value;
+		document.form.textarea.value = eval(hasil);
+		}
+
+		// Clean
+		function clean(){
+		document.form.textarea.value = "";
+		}
+
+		// Delete
+		function back(){
+		var hasil = document.form.textarea.value;
+		document.form.textarea.value = hasil.substring(0,hasil.length-1);
+		}
+	</script>
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+	<div class="bg"></div>
+		<div class="main">
+			<h2>Calculator</h2>
+			<form name="form">
+				<input class="textarea" name="textarea">
+			</form>
+				<table>
+					<tr>
+						<td><input class="button" type="button" value="C" onclick="clean()"></td>
+						<td><input class="button" type="button" value="<" onclick="back()"></td>
+						<td><input class="button btn-green" type="button" value="/" onclick="insert(' / ')"></td>
+						<td><input class="button btn-green" type="button" value="x" onclick="insert(' * ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+						<td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+						<td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+						<td><input class="button btn-green" type="button" value="-" onclick="insert(' - ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+						<td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+						<td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+						<td><input class="button btn-green" type="button" value="+" onclick="insert(' + ')"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+						<td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+						<td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+						<td rowspan=2><input style="height:106px;" class="button btn-green" type="button" value="=" onclick="equal()"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="0" onclick="insert(0)"></td>
+						<td><input class="button" type="button" value="00" onclick="insert('00')"></td>
+						<td><input class="button" type="button" value="." onclick="insert('.')"></td>
+					</tr>
+				</table>
+			
+		</div>
+	</div>
+	
+</body>
+</html>
