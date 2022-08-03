@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9757d496-239b-46c5-baea-6873cbfe9b3d/dck87oq-3faf0b63-4dc1-4eab-8be9-d3ee2b8fcba1.png/v1/fill/w_1131,h_707,q_70,strp/antares_by_joeyjazz_dck87oq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzk3NTdkNDk2LTIzOWItNDZjNS1iYWVhLTY4NzNjYmZlOWIzZFwvZGNrODdvcS0zZmFmMGI2My00ZGMxLTRlYWItOGJlOS1kM2VlMmI4ZmNiYTEucG5nIiwid2lkdGgiOiI8PTIwNDgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.jgy6cou0uSX4PM_tPElfPRheGj6vk0HJxOdR6tJZf4g);
+    background-size: cover;
+  }
+  .container {
+    max-width: 400px;
+    margin: 4vh auto 0 auto;
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+    background-color: white;
+  }
+  
+  #display {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+  }
+  
+  .buttons {
+    display: grid;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid#999;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .buttons > div {
+    border-top: 1px solid #999;
+    border-right: 1px solid#999;
+  }
+  
+  .button {
+    border: 0.5px solid #999;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  #equal {
+    background-color: rgb(85, 85, 255);
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
