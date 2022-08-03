@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(titan.jpg);
+}
+
+.second-table{
+    width: 700px;
+    height: 900px;
+    background-color: #000;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scale(0.7);
+    box-shadow: 0px 10px 10px -5px black;
+
+}
+.second-table{
+    padding: 20px;
+}
+
+.second-table tr td{
+width: 100px;
+height: 100px;
+}
+
+.second-table .total{
+    background-color: #000;
+    border-radius: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.zero{
+    width: 200px;
+    height: 90px;
+    border-radius: 50px;
+}
+
+button{
+    border-radius: 100%;
+    width: 95px;
+    height: 95px;
+    background-color: #333333;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+
+}
+button:hover{
+    background-color: #5b5a5a;
+    cursor: pointer;
+}
+
+.aaa{
+    background-color: #a5a5a5;
+    color: #000;
+}
+.aaa:hover{
+    background-color: #efe7e7;
+}
+
+.iphone-operation{
+    background-color: #fe9e09;
+}
+.iphone-operation:hover{
+    background-color: #ffc366;;
+}
+
+.second-table .total{
+font-size: 34px;
+}
