@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Calculator Iphone Style </title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script src="script.js"></script> 
+ <style type="text/css" id="dcoder_stylesheet">*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d3d4cf;
+}
+
+.second-table{
+    width: 500px;
+    height: 700px;
+    background-color: #000;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scale(0.7);
+    box-shadow: 0px 10px 10px -5px black;
+   
+
+}
+.second-table{
+    padding: 20px;
+}
+
+.second-table tr td{
+width: 100px;
+height: 100px;
+}
+
+.second-table .total{
+    background-color: #000;
+    border-radius: 0;
+    text-align: right;
+    padding-right: 20px;
+}</style></head> 
+ <body> 
+  <div class="iphone"> 
+   <table class="second-table"> 
+    <tbody> 
+     <tr> 
+      <td colspan="4" class="total"><span id="iphoneTotal"></span></td> 
+     </tr> 
+     <tr> 
+      <td><button onclick="resetIphone()" class="aaa">AC</button></td> 
+      <td><button onclick="menfi()" class="aaa">+/-</button></td> 
+      <td><button onclick="faiz()" class="aaa">%</button></td> 
+      <td><button onclick="bolme()" class="iphone-operation">/</button></td> 
+     </tr> 
+     <tr> 
+      <td><button onclick="sec(7)">7</button></td> 
+      <td><button onclick="sec(8)">8</button></td> 
+      <td><button onclick="sec(9)">9</button></td> 
+      <td><button onclick="vurma()" class="iphone-operation">X</button></td> 
+     </tr> 
+     <tr> 
+      <td><button onclick="sec(4)">4</button></td> 
+      <td><button onclick="sec(5)">5</button></td> 
+      <td><button onclick="sec(6)">6</button></td> 
+      <td><button onclick="cixma()" class="iphone-operation">-</button></td> 
+     </tr> 
+     <tr> 
+      <td><button onclick="sec(1)">1</button></td> 
+      <td><button onclick="sec(2)">2</button></td> 
+      <td><button onclick="sec(3)">3</button></td> 
+      <td><button onclick="toplama()" class="iphone-operation">+</button></td> 
+     </tr> 
+     <tr> 
+      <td colspan="2"><button onclick="sec(0)" class="zero">0</button></td> 
+      <td><button onclick="noqte()">,</button></td> 
+      <td><button onclick="neticeIphone()" class="iphone-operation">=</button></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">// Süleymalı Fuad
+// Iphone Calculator
+
+
+function sec(nomre) {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = reqem + nomre;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+
+function menfi() {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = "-" + reqem;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function faiz() {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = reqem * 1 / 100;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function noqte() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "."
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function resetIphone() {
+    reset = document.getElementById("iphoneTotal").innerHTML
+    reset = "";
+    document.getElementById("iphoneTotal").innerHTML = reset;
+}
+
+function azaltReqemi() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    document.getElementById("iphoneTotal").innerHTML = reqem.substring(0, reqem.length - 1);
+
+
+} function vurma() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "*"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function bolme() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "/"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+function cixma() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "-"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+function toplama() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "+"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+
+
+
+function yoxlama() {
+    if (isNaN(eval(neticemiz)) !== false) {
+        alert("Səhflik var")
+    }
+}
+
+function neticeIphone() {
+    neticemiz = document.getElementById("iphoneTotal").innerHTML
+    yoxlama();
+    document.getElementById("iphoneTotal").innerHTML = eval(neticemiz)
+
+}</script></body></html>
