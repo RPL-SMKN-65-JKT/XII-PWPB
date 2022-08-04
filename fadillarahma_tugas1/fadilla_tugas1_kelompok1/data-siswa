@@ -1,0 +1,58 @@
+[
+	{
+		"NO" : "1",
+		"Nama" : "M. Irza Arivin Ngibadi",
+		"NIS" : "00125",
+		"Hobi" : "Ngoding, Bulutangkis",
+		"Cita" : "Chief Technology Officer"
+	},
+
+	{
+		"NO" : "2",
+		"Nama" : "Apra Hazima Sunjaya",
+		"NIS" : "00116",
+		"Hobi" : "Masak",
+		"Cita" : "youtubers"
+	},
+
+	{
+		"NO" : "3",
+		"Nama" : "Anggia Cahyati",
+		"NIS" : "00115",
+		"Hobi" : "Nonton drakor",
+		"Cita" : "orang kaya"
+	},
+
+	{
+		"NO" : "4",
+		"Nama" : "Fadilla Rahma A",
+		"NIS" : "00121",
+		"Hobi" : "Tidur",
+		"Cita" : "Ultraman"
+	},
+
+	{
+		"NO" : "5",
+		"Nama" : "Muhammad Fadli",
+		"NIS" : "00127",
+		"Hobi" : "Ngevlog",
+		"Cita" : "TNI AL"
+	},
+
+	{
+		"NO" : "6",
+		"Nama" : "Ilhan Fauzan Is",
+		"NIS" : "00123",
+		"Hobi" : "Berenang",
+		"Cita" : "Programmer"
+	},
+
+	{
+		"NO" : "7",
+		"Nama" : "Muhammad Afrizal",
+		"NIS" : "00126",
+		"Hobi" : "Main bola",
+		"Cita" : "Pemain bola"
+	}
+
+]
