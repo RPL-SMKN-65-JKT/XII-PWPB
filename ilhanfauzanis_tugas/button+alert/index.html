@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="jquery-3.6.0.min.js"></script>
+	<title>Button + Alert</title>
+</head>
+<body>
+	Menuju link youtube :
+	<button id="yt" >Klik</button>
+    <script>
+        $("document").ready(function(){
+            $("#yt").click(function(){
+                alert ("BocilKematian");
+                document.location.href = "https://youtu.be/iUv_ECh3Ank";
+            })
+        })
+    </script>
+
+    <!-- Tabel -->
+<table border="1">
+	<tr>
+		<td>Nama</td>
+		<td>Kelas</td>
+		<td></td>
+	</tr>
+	</table>
+	<script type="text/javascript">
+		$("table").prepend("<tr><td>nama</td><td>kelas</td></tr>");
+		$("table").append("<tr><td>alia</td><td>12rpl</td></tr>");
+		$("table").after("<tr><td>saya</td><td>kamu</td></tr>");
+		$("table").before("<tr><td>harus</td><td>kudu</td></tr>");
+	</script>
+</body>
+</html>
