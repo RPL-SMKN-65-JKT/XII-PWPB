@@ -1,0 +1,26 @@
+{
+"channel": {
+    "id": 804745,
+    "name": "Water Quality",
+    "latitude": "-6.999032",
+    "longitude": "107.626451",
+    "field1": "PH Air",
+    "field2": "Tempearture",
+    "field3": "Kelembaban",
+    "created_at": "2019-06-19T16:24:48+07:00",
+    "updated_at": "2019-07-06T06:55:33+07:00",
+    "last_entry_id": 587
+  },
+  "feeds": [
+    {
+      "created_at": "2019-07-01T05:45:31+07:00",
+      "entry_id": 488,
+      "field1": "5.00\r\n\r\n"
+    },
+    {
+      "created_at": "2019-07-01T05:46:01+07:00",
+      "entry_id": 489,
+      "field1": "5.07\r\n\r\n"
+    }
+]
+}

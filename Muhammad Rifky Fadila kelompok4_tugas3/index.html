@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data Siswa RPL</title>
+	<script src="jquery-3.6.0.min.js"></script>
+	<style>
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-size: 50px;
+			font-family: "Helvetica Neue", sans-serif;
+			margin: 50px 0;
+		}
+
+		table {
+			margin: 0 auto;
+		}
+
+		table tr td {
+			padding: 15px;
+			font-family: "Montserrat", sans-serif;
+		}
+
+		table tr#judul td h2 {
+			font-family: "Helvetica Neue", sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Data Siswa RPL</h1>
+
+	<table cellspacing="0" border="1px">
+		<tr id="judul">
+			<td><h2>No</h2></td>
+			<td><h2>Nama</h2></td>
+			<td><h2>NIS</h2></td>
+			<td><h2>Hobi</h2></td>
+			<td><h2>Cita-Cita</h2></td>
+		</tr>
+	</table>
+
+	<script>
+		$(document).ready(function () {
+    
+		    var json = [{"NO":"1","Nama":"M. Irza Arivin Ngibadi","NIS":"00125","Hobi":"Ngoding, Bulutangkis","Cita":"Chief Technology Officer"},{"NO":"2","Nama":"Apra Hazima Sunjaya","NIS":"00116","Hobi":"Masak","Cita":"Youtubers"},{"NO":"3","Nama":"Anggia Cahyati","NIS":"00115","Hobi":"Nonton Drakor","Cita":"Orang Kaya"},{"NO":"4","Nama":"Fadilla Rahma A","NIS":"00121","Hobi":"Tidur","Cita":"Ultraman"},{"NO":"5","Nama":"Muhammad Fadli","NIS":"00127","Hobi":"Ngevlog","Cita":"TNI AL"},{"NO":"6","Nama":"Ilhan Fauzan Is","NIS":"00123","Hobi":"Berenang","Cita":"Programmer"},{"NO":"7","Nama":"Muhammad Afrizal","NIS":"00126","Hobi":"Main bola","Cita":"Pemain bola"}];
+		    var tr;
+
+		    for(var i = 0; i >= json.length; i++) {
+		    	tr = ("<td><h2>" + json[i].NO + "</h2></td>" + "<td>" + json[i].Nama + "</td>" + "<td>" + json[i].NIS + "</td>" + "<td>" + json[i].Hobi + "</td>" + "<td>" + json[i].Cita + "</td>");
+
+		    	$("#judul").after(tr);
+		  	}
+
+		});
+	</script>
+	
+</body>
+</html>

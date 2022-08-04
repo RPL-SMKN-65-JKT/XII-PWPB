@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <body>
+        <h2>Buat tabel berdasarkan data JSON.</h2>
+        <div class="liveSample" spry:region="dsExample8">
+          <table class="dataTable" border="1" style="text-align: center">
+            <tr>
+              <th spry:sort="id">No</th>
+              <th spry:sort="type">Nama</th>
+              <th spry:sort="nisn">NISN</th>
+              <th spry:sort="hobi">Hobi</th>
+              <th spry:sort="cita">Cita2</th>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>1</td>
+              <td>Lintang Raditya</td>
+              <td>....</td>
+              <td>Turu</td>
+              <td>Bahagia</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>2</td>
+              <td>Vera Amelia Putri</td>
+              <td>....</td>
+              <td>Turu</td>
+              <td>Keliling Dunia</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>3</td>
+              <td>Akmal Rangga Saputra</td>
+              <td>....</td>
+              <td>Pulang kerumah</td>
+              <td>Sampai rumah</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>4</td>
+              <td>M. Najib P.A</td>
+              <td>....</td>
+              <td>NR</td>
+              <td>Sunmory gak kesiangan</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>5</td>
+              <td>Rafli Ariansah</td>
+              <td>....</td>
+              <td>Roasting</td>
+              <td>Pelawak</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>6</td>
+              <td>Sabrina Azahra</td>
+              <td>....</td>
+              <td>Main</td>
+              <td>Ustazah</td>
+            </tr>
+            <tr spry:repeat="dsExample8">
+              <td>7</td>
+              <td>M. Rizqi Abdilah</td>
+              <td>....</td>
+              <td>Main Game</td>
+              <td>Pro Player</td>
+            </tr>
+          </table>
+        </div>
+
+        <script>
+          var obj,
+            dbParam,
+            xmlhttp,
+            myObj,
+            x,
+            txt = "";
+          obj = { table: "customers", limit: 20 };
+          dbParam = JSON.stringify(obj);
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              myObj = JSON.parse(this.responseText);
+              txt += "<table border='1'>";
+              for (x in myObj) {
+                txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+              }
+              txt += "</table>";
+              document.getElementById("demo").innerHTML = txt;
+            }
+          };
+          xmlhttp.open("POST", "json_demo_html_table.php", true);
+          xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xmlhttp.send("x=" + dbParam);
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
