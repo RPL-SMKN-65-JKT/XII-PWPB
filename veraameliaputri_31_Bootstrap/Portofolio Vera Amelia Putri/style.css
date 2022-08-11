@@ -1,0 +1,74 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+	color: #FFF;
+}
+.navbar-brand {
+	font-family: 'Nunito', sans-serif;
+}
+
+.nav-link {
+	font-weight: 500;
+	font-size: 1rem;
+	color: #FFF;
+}
+
+.nav-link.active,
+.navbar-brand {
+	color: var(--clr-dark) !important;
+}
+
+.main-header {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+@media (min-width: 600px){
+	.main-header {
+		font-size: 4rem;
+	}
+}
+
+.text-content {
+	letter-spacing: 0.025rem;
+	font-size: 0.875rem;
+}
+
+.myphoto {
+	object-fit: cover;
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.section-header {
+	font-weight: bold;
+	color: #000;
+}
+section {
+	padding-top: 5rem;
+}
+
+.contact{
+	height: 200px;
+	width: 100%;
+	align-content: center;
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 23px;
+	margin-bottom: -85px;
+}
+.contact a{
+	text-decoration: none;
+	border-radius: 20px;
+}
+.contact a i{
+	font-size: 50px;
+	transition: 0.1s;
+	color: rgb(0, 0, 0);
+}
+.contact a i : hover{
+	font-size: 100px;
+}
