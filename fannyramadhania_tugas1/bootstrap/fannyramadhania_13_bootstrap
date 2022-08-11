@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Latihan Bootstrap</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+	<div class="navigasii">
+			<nav class="navbar navbar-expand-lg bg-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Navbar</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Link</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Dropdown
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li><a class="dropdown-item" href="#">Action</a></li>
+	            <li><a class="dropdown-item" href="#">Another action</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <form class="d-flex" role="search">
+	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	        <button class="btn btn-outline-success" type="submit">Search</button>
+	      </form>
+	    </div>
+	  </div>
+	</nav>
+	</div>
+
+
+	<div class="content">
+		<h2>TOP 10 BAHASA PEMROGRAMAN</h2>
+	</div>
+
+	<h2 data-aos="fade-up">Lorem Ipsum</h2>
+
+	<div class="isi">
+		<div class="java" data-aos="fade-up">
+			<div class="card" style="width: 25rem; height: 32rem;">
+			  <img src="java.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">Java adalah bahasa pemrograman yang dapat dijalankan di berbagai komputer termasuk telepon genggam. Bahasa ini awalnya dibuat oleh James Gosling saat masih bergabung di Sun Microsystems, yang saat ini merupakan bagian dari Oracle dan dirilis tahun 1995.</p>
+			  </div>
+			</div>
+		</div>
+
+
+			<div class="go" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem;">
+			  <img src="go.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">Golang adalah bahasa pemrograman open source yang dikembangkan oleh tim Google,Bahasa pemrograman Golang atau yang sering disebut Go Language ingin mempertemukan performa bahasa-bahasa pemrograman pendahulunya yang terkenal cepat seperti bahasa C, C++ dan kemudahan dalam mengembangkan atau menulis program seperti bahasa- bahasa modern yang ada sekarang.</p>
+			  </div>
+			</div>
+		</div>
+
+
+
+			<div class="php"data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem;">
+			  <img src="php.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">PHP adalah sebuah bahasa pemrograman server side scripting yang bersifat open source.Sebagai sebuah scripting language, PHP menjalankan instruksi pemrograman saat proses runtime. Hasil dari instruksi tentu akan berbeda tergantung data yang diproses.PHP merupakan bahasa pemrograman server-side, maka script dari PHP nantinya akan diproses di server. Jenis server yang sering digunakan bersama dengan PHP antara lain Apache, Nginx, dan LiteSpeed.</p>
+			  </div>
+			</div>
+		</div>
+
+
+
+			<div class="python" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32 rem;">
+			  <img src="python.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">Python adalah bahasa pemrograman tujuan umum yang ditafsirkan, tingkat tinggi. Dibuat oleh Guido van Rossum dan pertama kali dirilis pada tahun 1991, filosofi desain Python menekankan keterbacaan kode dengan penggunaan spasi putih yang signifikan.</p>
+			  </div>
+			</div>
+		</div>
+
+
+
+		<div class="c#" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px;">
+			  <img src="c2.jpeg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">C# merupakan sebuah bahasa pemrograman yang berorientasi objek yang dikembangkan oleh Microsoft sebagai bagian dari inisiatif kerangka .NET Framework.Biasa dimanfaatkan untuk mengembangkan aplikasi Windows. Ia juga sering dipakai dalam penulisan program aplikasi web hingga game</p>
+			  </div>
+			</div>
+		</div>
+
+
+		<div class="ruby" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px; margin-left: 20px;">
+			  <img src="rubyy.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">Ruby adalah bahasa pemrograman dinamis berbasis skrip yang berorientasi objek. Tujuan dari ruby adalah menggabungkan kelebihan dari semua bahasa-bahasa pemrograman skrip yang ada di dunia. Ruby ditulis dengan bahasa pemrograman C dengan kemampuan dasar seperti Perl dan Python.</p>
+			  </div>
+			</div>
+		</div>
+
+		<div class="cpp"data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px; margin-left: 20px;">
+			  <img src="cp2.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">C++ adalah bahasa pemrograman komputer yang dibuat oleh Bjarne Stroustrup, yang merupakan perkembangan dari bahasa C dikembangkan di Bell Labs. Pada awal tahun 1970-an, bahasa itu merupakan peningkatan dari bahasa sebelumnya, yaitu B.</p>
+			  </div>
+			</div>
+		</div>
+
+		<div class="swift" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px; margin-left: 20px;">
+			  <img src="sw.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">Swift adalah bahasa pemrograman objek fungsional untuk pengembangan iOS dan OS X yang dibuat oleh Apple. Didesain untuk berdampingan dengan Objective-C dan menghindari program dari kode yang salah. Swift diperkenalkan oleh Apple pada acara tahunan WWDC 2014</p>
+			  </div>
+			</div>
+		</div>
+
+
+		<div class="js" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px; margin-left: 20px;">
+			  <img src="jss.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.</p>
+			  </div>
+			</div>
+		</div>
+
+
+
+
+		<div class="sql" data-aos="fade-up">
+				<div class="card" style="width: 25rem; height: 32rem; margin-top: 50px; margin-left: 20px;">
+			  <img src="sql.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <p class="card-text">SQL adalah sebuah bahasa yang digunakan untuk mengakses data dalam basis data relasional. Bahasa ini secara de facto merupakan bahasa standar yang digunakan dalam manajemen basis data relasional. Saat ini hampir semua server basis data yang ada mendukung bahasa ini untuk melakukan manajemen datanya.</p>
+			  </div>
+			</div>
+		</div>
+
+
+
+
+
+		</div>
+
+
+	
+
+	<script>
+	  AOS.init();
+	</script>
+
+
+</body>
+</html>
