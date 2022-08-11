@@ -1,0 +1,56 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #54BAB9;
+  color: #fff;
+}
+
+#projects {
+  background-color: #9ED2C6;
+}
+
+.project {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.contact {
+  height: 200px;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 23px;
+  margin-bottom: -85px;
+}
+
+.contact a {
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.contact a i {
+  font-size: 50px;
+  transition: 0.1s;
+  color: rgb(0, 0, 0);
+}
+
+.contact a i:hover {
+  font-size: 100px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  transition: 0.1s;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 1rem;
+}
