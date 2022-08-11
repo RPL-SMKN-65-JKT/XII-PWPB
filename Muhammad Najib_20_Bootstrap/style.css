@@ -1,0 +1,69 @@
+body{
+	background-image: url(LOGO.jpeg);
+}
+
+
+h2:hover{
+	color: #D7DBDD;
+	text-decoration: underline;
+}
+
+.content{
+	height: 500px;
+	background-image: url(bgggg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cpp{
+	margin-left: 50px;
+}
+
+
+h2{
+	cursor: pointer;
+	text-shadow: 2px 2px 4px #000000;
+	position: relative;
+	top: 200px;
+	margin-left: 250px;
+	color: white;
+	font-size: 60px;
+	font-family: Copperplate;
+}
+
+
+.isi{
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 20px;
+	flex-wrap: wrap;
+	width: ;
+}
+
+.h2{
+	margin-left: 70px;
+	margin-right: 20px;
+}
+
+.r1{
+	margin-right: 20px;
+}
+
+.r1m{
+	margin-left: 475px;
+}
+.V4{
+
+}
+
+.zx10{
+	margin-left: 70px;
+	margin-right: 20px;
+	margin-top: 50px;
+}
+
+
+.ruby img{
+	width: auto;
+	height: 300px;
+}
