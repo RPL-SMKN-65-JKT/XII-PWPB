@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Segitiga</title>
+    
+    <script type="text/javascript">
+        function hitungluas(){
+          let alas=document.getElementById("alas").value;
+          let tinggi=document.getElementById("tinggi").value;
+          let luas=(alas*tinggi)*0.5;
+          document.getElementById("luas").value=luas;
+          }
+     </script>
+
+</head>
+<body>
+    <form>
+        <h4>Menghitung Luas Segitiga</h4>
+          <table>
+             <tr>
+                  <td>Alas</td>
+                  <td>:</td>
+                  <td><input type="text" id="alas" name="alas"></td>
+             </tr>
+             <tr>
+                  <td>Tinggi</td>
+                  <td>:</td>
+                  <td><input type="text" id="tinggi" name="tinggi"></td>
+             </tr> 
+              <tr>
+                  <td>Luas</td>
+                  <td>:</td>
+                  <td><input type="text"  id="luas" name="luas" disabled="true" size="5"></td>
+             </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td><button onclick="hitungluas(); return false" id="submit_button">Hitung Luas</td>
+             </tr>
+          </table>
+        </form>
+</body>
+</html>
