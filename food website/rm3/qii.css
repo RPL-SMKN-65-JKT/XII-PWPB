@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
+
+.jumbotron {
+  padding-top: 3rem;
+  background-color: #cd853f;
+  color: #fff;
+}
+#about {
+  padding-bottom: 3rem;
+}
