@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    
+    <link rel="shortcut icon" href="zahwalogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+       * {
+          text-decoration: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Open-Sans', sans-serif;
+      }
+
+      .wrapper{
+        width: 1100px;
+        margin: auto;
+        position: relative;
+      }
+
+      .nav-item a{
+        color: black;
+        font-weight: bold;
+        margin-right: 30px;
+        float: right;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      .nav-item a:hover{
+        color: #C58940;
+      }
+
+      .nav-item a span{
+        color:#C58940;
+        font-weight: bold;
+        margin-right: 30px;
+        float: right;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      section{
+        width: 30%;
+      }
+
+      .polaroid{
+        padding: 0 10px;
+        float: left;
+        width: 20.2%;
+        margin: 20px;
+      }
+
+      .gallery{
+        border: 1px solid #ccc;
+      }
+
+      .gallery:hover{
+        border: 1px solid #FFBABA;
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+
+      .gallery img{
+        width: 200px;
+        height: auto;
+      }
+
+      .card{
+        border: none;
+      }
+
+      .card:hover{
+        border: 2px solid #FFBABA;
+        box-shadow: 0 0 3px 2px rgba(0, 140, 186, 0.5);
+      }
+
+      #copyright {
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        margin-top: 200px;
+        margin-bottom: 10px;
+        color: #C58940;
+      }
+
+      @media screen and (max-width:991.98px) {
+      .wrapper {
+          width: 90%;
+      }
+
+      .logo a img{
+        display: block;
+        width: 100%;
+    }
+
+      .polaroid{
+         width: 50%;
+      }
+
+      img{
+        display: block;
+        width: 50%;
+        height: auto;
+      }
+
+      h1{
+        width: 50%;
+      }
+
+      .h1{
+        float: none;
+        display: inline-block;
+        width: 50%;
+      }
+
+    }
+    </style>
+  </head>
+  <body>
+  <div class="wrapper">
+
+    <!--HEADER-->
+    <nav class="navbar navbar-expand-sm" style="position: sticky;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="zahwalogo.png" width="90px" height="90px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" style="font-size: 20px;">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><span>Portfolio</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <h1 class="h1" align="center" style="margin-top: 16%; font-family: 'Dancing Script', cursive; font-size: 60px;">Welcome to My Portofolio</h1>
+    <!--My First Web-->
+    <!-- Carousel -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" style="background-color: #A6BB8D;"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" style="background-color: #A6BB8D;"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" style="background-color: #A6BB8D;"></button>
+      </div>
+      
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="web.jpg" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="web1.jpg" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="game.png" alt="" class="d-block" style="width:100%">
+        </div>
+      </div>
+      
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" style="background-color: #E5BA73;"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon" style="background-color: #E5BA73;"></span>
+      </button>
+    </div>
+
+    <div class="container-fluid mt-3">
+      <h3>My Game with Team</h3>
+      <p>PIPONG BALL GAMES.</p>
+    </div>
+
+    <br>
+    <br>
+    <!--GALLERY-->
+    <div class="container-fluid" align="center">
+      <h3>My Photos</h3>
+    </div>
+
+    <div class="polaroid" align="center">
+      <div class="gallery">
+        <img src="1.jpg">
+      </div>
+    </div>
+
+    <div class="polaroid" align="center">
+      <div class="gallery">
+        <img src="2.jpg">
+      </div>
+    </div>
+
+    <div class="polaroid" align="center">
+      <div class="gallery">
+        <img src="3.jpg">
+      </div>
+    </div>
+
+    <div class="polaroid" align="center">
+      <div class="gallery">
+        <img src="4.jpg">
+      </div>
+    </div>
+      <br>
+      <br> 
+      <br>
+    <br>
+    </div>
+    
+
+    <!--Testimoni-->
+    <h3 style="text-align: center; font-weight: bold; margin-top: 30%;">My Reputation</h3>
+    <br>
+    <div id="card" style="float: left; width: 24.6%; margin-left: 16%;">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h4 style="text-align: center; font-size: 20px;">Anggia Cahyati</h4>
+          <p class="card-text" style="text-align: center; font-size: 15px;">Mantep! ga bakal nyesel deh kalau make jasa dia, di jamin puas!!!</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card" style="float: left; width: 24.6%;">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h4 style="text-align: center; font-size: 20px;">Rifky Fadillah</h4>
+          <p class="card-text" style="text-align: center; font-size: 15px;">Websitenya bagus, berkualitas, designnya mantep. Pokoknya recomended</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card" style="float: left; width: 24.6%;">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h4 style="text-align: center; font-size: 20px;">Nursuci S Putri</h4>
+          <p class="card-text" style="text-align: center; font-size: 15px;">Interfacenya bagus, orangnya asik, pewarnaan webnya bagus.</p>
+        </div>
+      </div>
+    </div>
+
+    
+
+   <!---FOOTER--->
+    <div id="copyright">
+        &copy; 2023. <b>My Portfolio</b> All Right Reserved.
+      </div>
+  </div>
+
+  </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
