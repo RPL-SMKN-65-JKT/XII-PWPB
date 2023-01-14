@@ -1,0 +1,32 @@
+Food Ordering System ERD
+
+Pelanggan
+- Nama_Pengguna
+- Email
+- No_Telepon
+- Password
+
+Admin
+- Nama_Pengguna
+- Email
+- No_Telepon
+- Password
+
+Produk
+- Nama_Produk
+- Gambar
+- Harga
+- Id_Produk
+- Deskripsi
+
+Pembayaran
+- Credit Card
+- E_wallet
+- Transfer_Bank
+- Ongkos_Kirim
+
+Pemesanan
+- Jumlah
+- Harga
+- Nama_Produk
+- Transaksi_Pembayaran
