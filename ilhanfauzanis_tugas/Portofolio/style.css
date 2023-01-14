@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    font-family: 'poppins', sans-serif, cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: 	#111111;
+  overflow-x: hidden;
+}
+
+/* nav */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #24252a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: #edf0f1;
+}
+
+.logo:hover{
+  box-shadow: inset 0 0 0 0 #ff59c7;
+  color: #ff59c7;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #ff59c7;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color:#ff59c7;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: #ff94e0;
+}
+
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay{
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+    z-index: 99;
+  }
+
+  .fa-xmark{
+    font-size: 40px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type:none;
+  }
+  li {
+    list-style-type:none;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    font-size: 20px;
+    transition: color 0.3s ease 0s;
+  }
+
+  .overlay li{
+    padding: 5px;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #ff59c7;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media(max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  
+/* /nav */
+
+/* banner */
+.hello-banner{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.name-pink{
+  color: #ff59c7;
+  font-weight: bolder;
+}
+
+.name{
+  font-size: 78px;
+}
+
+.text-banner{
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.banner{
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(assets/img/laut.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  padding: 200px 100px;
+  overflow: hidden;
+}
+
+.banner-content{
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* banner-mobile */
+@media(max-width:680px){
+  .hello-banner,.banner{
+    text-align: center;
+  }
+
+  .name .name-pink{
+    text-align: center;
+  }
+}
+/* /banner */
+
+/* about me */
+
+.aboutme{
+  height: auto;
+  display: flex;
+  width: 100%;
+  padding: 150px 120px;
+  box-sizing: border-box;
+  background-color: #111111;
+}
+
+.fa-calendar{
+  color: #edf0f1;
+  margin-left: 2px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.fa-house{
+  color: #edf0f1;
+  margin-right: 18px;
+}
+
+.fotoku{
+  margin-right: 150px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.fotoku img{
+  box-shadow: -30px -30px #ff59c7;
+  border-radius: 50%;
+  width: 150%;
+}
+
+.helo{
+  color: #edf0f1;
+  font-size: 54px;
+}
+
+.about-text{
+  align-items: left;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+/* about-mobile */
+@media(max-width:680px){
+  .aboutme{
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .fotoku{
+    align-items: center;
+    width: 70%;
+    
+  }
+}
+
+/* icon */
+
+.icon{
+  justify-content: space-evenly;
+}
+
+.fa-instagram{
+  font-size: 60px;
+  color: #edf0f1;
+  background: #ff59c7;
+  padding: 15px 20px;
+  border-radius: 50%;
+  margin: 50px 50px;
+}
+
+.fa-instagram:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.fa-facebook{
+  font-size: 60px;
+  color: #edf0f1;
+  background: #ff59c7;
+  padding: 15px 15px;
+  border-radius: 50%;
+  margin: 50px 50px;
+}
+
+.fa-facebook:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.fa-github{
+  font-size: 60px;
+  color: #edf0f1;
+  background: #ff59c7;
+  padding: 15px 15px;
+  border-radius: 50%;
+  margin: 50px 50px;
+}
+
+.fa-github:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+p{
+  color: #edf0f1;
+}
+/* /about me */
+
+/* services */
+.services{
+  height: auto;
+  box-sizing: border-box;
+  padding: 100px 120px ;
+  width: 100%;
+  background-color:	#1e1e1e;
+}
+
+.services-content{
+  margin-bottom: 20px;
+  height: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-services{
+  text-align: center;
+  margin-bottom: 50px;
+  color: #edf0f1;
+}
+
+/* Card color warna */
+
+.allcards-services{
+  display: flex;
+  justify-content: center;
+}
+
+.allcards-services h1{
+  color: #edf0f1;
+}
+
+
+.allcards-services .card {
+  width: 300px;
+  height: auto;
+  background-color: #1e1e1e;
+  transition: 0.3s;
+  border-radius: 20px;
+  margin: 0 15px;
+  border: none;
+}
+
+.card:hover{
+  background-color: #edf0f1;
+  color: #ff59c7;
+}
+
+.card:hover .card-body h1{
+  color: #ff59c7;
+}
+
+.card:hover .card-body p {
+  color: #ff59c7;
+}
+
+
+.card1 img{
+  opacity: 30%;
+}
+
+.card2 img{
+  opacity: 30%;
+}
+
+.card3 img{
+  opacity: 30%;
+}
+
+.card1 img:hover{
+  opacity: 80%;
+}
+
+.card2 img:hover{
+  opacity: 80%;
+}
+
+.card3 img:hover{
+  opacity: 80%;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+  margin: 10px;
+}
+
+.card-text{
+  padding-top: 15px;
+}
+
+.card3 h1{
+  font-size: 30px;
+}
+
+.card3 .card-text{
+  padding-top: 40px;
+}
+
+/* card-service-mobile */
+@media(max-width:680px){
+  .allcards-services{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+  .allcards-services .card{
+    margin: 10px;
+  }
+}
+/* /services */
+
+/* project */
+.project{
+  height: auto;
+  box-sizing: border-box;
+  padding: 100px 120px ;
+  width: 100%;
+  background-color:	#1e1e1e;
+}
+
+.project-content{
+  margin-bottom: 20px;
+  height: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-project{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Card color warna */
+
+.allcards-project{
+  display: flex;
+  justify-content: center;
+}
+
+.allcards-project h1{
+  font-size: 40px;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  background-color: #ff59c7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+
+.card:hover{
+  background-color: #edf0f1;
+  color: #ff59c7;
+}
+
+.card:hover .card-body p {
+  color: #ff59c7;
+}
+
+.card1 img{
+  opacity: 30%;
+}
+
+.card2 img{
+  opacity: 30%;
+}
+
+.card3 img{
+  opacity: 30%;
+}
+
+.card1 img:hover{
+  opacity: 80%;
+}
+
+.card2 img:hover{
+  opacity: 80%;
+}
+
+.card3 img:hover{
+  opacity: 80%;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* card-service-mobile */
+@media(max-width:680px){
+  .allcards-project{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+  .allcards-project .card{
+    margin: 15px;
+  }
+}
+
+/* work */
+.work{
+  padding: 150px 0px;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  background-color:	#111111;
+}
+
+.work-content{
+  margin-bottom: 20px;
+  height: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #edf0f1;
+  border: 4px solid #ff59c7;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the right */
+.right {
+  left: 10%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content p{
+  color: #24252a;
+}
+
+.content img{
+  width: 50%;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  .work{
+    margin: auto;
+    width: 85%;
+  }
+
+  .work img{
+    width: 90%;
+  }
+
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 20px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .right::after {
+    left: -27px;
+  }
+}
+
+/* /work */
+
+/* Testimonial */
+.testimonial{
+  padding: 100px 0px;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  background-color:	#1e1e1e;
+}
+
+.testimonial-content{
+  margin-bottom: 10px;
+  height: 30%;
+  color: #ff59c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-content .helo {
+  margin-bottom: 80px;
+}
+
+.testimoni-text{
+  color: #ff59c7;
+}
+
+.card-testi{
+  padding: 20px;
+  font-size: 20px;
+  color: #ff59c7;
+}
+
+.slider .card{
+  height: 250px;
+  background-color: #edf0f1;
+}
+
+.slider .card:hover{
+  color: #edf0f1;
+  background: #ff59c7;
+}
+
+.card:hover .card-testi p{
+  color: #edf0f1;
+}
+
+.card:hover .card-testi h2{
+  color: #edf0f1;
+}
+
+.card:hover .fa-quote-left{
+  color: #edf0f1;
+}
+
+
+/* /Testimonial */
+
+/* contactme */
+
+section.contactme div.ingfokan {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+}
+
+.contactme{
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(assets/img/dalam-laut.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 200px 100px;
+  overflow: hidden;
+}
+
+.ingfokan{
+  display: flex;
+}
+
+.hello-contactme{
+  font-size: 68px;
+  font-weight: bold;
+}
+
+.contactme .hello-banner{
+  font-size: 100px;
+}
+
+.bannerImg .framed {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+}
+
+/* contactme-photo */
+:root {
+  --pink: #ff94e0;
+  --bgColor: bisque;
+}
+
+img.framed {
+  margin: auto 90px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--bgColor);
+  box-shadow:
+    -50px -50px 0 -40px var(--pink),
+    50px 50px 0 -40px var(--pink);  
+}
+
+.contactme-icon{
+  justify-content: space-between;
+  display: flex;
+  margin: 30px;
+}
+
+.contactme-icon .fa-envelope{
+    font-size: 60px;
+    color: #edf0f1;
+    background: #ff59c7;
+    padding: 15px 15px;
+    border-radius: 50%;
+    
+}
+
+.fa-envelope:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 0.7s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.contactme-icon .fa-linkedin{
+  font-size: 60px;
+  color: #edf0f1;
+  background: #ff59c7;
+  padding: 15px 19px;
+  border-radius: 50%;
+}
+
+.fa-linkedin:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 0.7s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.contactme-icon .fa-whatsapp{
+  font-size: 60px;
+  color: #edf0f1;
+  background: #ff59c7;
+  padding: 15px 20px;
+  border-radius: 50%;
+}
+
+.fa-whatsapp:hover{
+  color: #ff59c7;
+  background: #edf0f1;
+  transition: color 0.7s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+/* contactme-mobile */
+@media(max-width:680px){
+  .contactme{
+    text-align: center;
+    width: 100%;
+}
+
+  .ingfokan{
+    flex-direction: column-reverse;
+  }
+}
+
+  .bannerImg{
+    margin-bottom: 50px;
+  }
+
+  .contactme-icon a{
+    margin: 20px;
+  }
+
+
+/* /contactme */
+
+/* footer */
+.foot{
+  text-align: center;
+  padding: 3px;
+  background-color: #ff59c7;
+  color: white;
+}
